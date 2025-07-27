@@ -1,8 +1,10 @@
 # netlify.toml
 
+[build]
+  command = "echo 'Starting build...'" # Perintah dummy, bisa juga "ls"
+  publish = "/" # Direktori publish (opsional, defaultnya root)
+
 [functions]
   directory = ".netlify/functions"
-  # Pastikan ini ada untuk memberitahu Netlify menggunakan runtime Python untuk fungsi-fungsi di direktori tersebut.
-  node_bundler = "esbuild"
-  environment = { PYTHON_VERSION = "3.9" } # Opsional: Anda bisa coba "3.10" atau "3.11" jika mau.
+  environment = { PYTHON_VERSION = "3.9" }
 
